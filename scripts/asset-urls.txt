@@ -1,0 +1,22 @@
+# Binary asset manifest: <public-relative path><TAB><source URL>
+# Fetched at Docker build time by scripts/restore-assets.sh.
+# Brand PNGs and design artwork are the originals from the media CDN;
+# fonts come from the google/fonts repository (OFL licensed).
+assets/brand/kharbesh-mark-white.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/d93430a71_Kharbesh_01_Primary_Arabic_Mark_White.png
+assets/brand/kharbesh-stacked-lockup-white.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/730ceff88_Kharbesh_02_Bilingual_Stacked_Lockup_White.png
+assets/brand/kharbesh-horizontal-footer-white.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/d14b2965c_Kharbesh_03_Bilingual_Horizontal_Footer_White.png
+assets/brand/kharbesh-chest-lockup-white.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/95b7fbdde_Kharbesh_04_Chest_Left_Compact_Lockup_White.png
+assets/brand/kharbesh-neck-monogram-white.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/5b66b4993_Kharbesh_05_Inside_Neck_Monogram_White.png
+assets/brand/kharbesh-icon-mono-white.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/b989ed599_Kharbesh_06_Brand_Icon_Mono_White.png
+assets/brand/kharbesh-icon-color.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/9269d9fbe_Kharbesh_07_Brand_Icon_Color.png
+assets/brand/kharbesh-icon-white-lime.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/082a58184_Kharbesh_07_Brand_Icon_White_Lime.png
+assets/designs/podcats.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/26c93640c_fashn-export-1786894032970.png
+assets/designs/ya-ammi.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/1e18c5f53_fashn-export-1786894113362.png
+assets/designs/memo.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/b69f892c2_fashn-export-1786894126586.png
+assets/designs/hayyana.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/96730f037_fashn-export-1786894142181.png
+assets/designs/paperboat.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/cba67ed3f_fashn-export-1786894157632.png
+assets/designs/door.png	https://media.base44.com/images/public/6a81d17c16f4557492682d21/105c79c74_fashn-export-1786894023875.png
+assets/fonts/Anton.ttf	https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf
+assets/fonts/IBMPlexSansArabic-Regular.ttf	https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansarabic/IBMPlexSansArabic-Regular.ttf
+assets/fonts/IBMPlexSansArabic-SemiBold.ttf	https://raw.githubusercontent.com/google/fonts/main/ofl/ibmplexsansarabic/IBMPlexSansArabic-SemiBold.ttf
+assets/fonts/Rakkas-Regular.ttf	https://raw.githubusercontent.com/google/fonts/main/ofl/rakkas/Rakkas-Regular.ttf

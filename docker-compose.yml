@@ -1,0 +1,32 @@
+services:
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-change-me}
+      MYSQL_DATABASE: safi_sport
+    ports:
+      - "3306:3306"
+    volumes:
+      - safi_mysql:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-proot$${MYSQL_ROOT_PASSWORD}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  app:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: mysql://root:${DB_ROOT_PASSWORD:-change-me}@db:3306/safi_sport
+      APP_SECRET: ${APP_SECRET:?set APP_SECRET}
+      SAFI_RBMSOFT_DRIVER: ${SAFI_RBMSOFT_DRIVER:-mock}
+      SAFI_SYNC_ENABLED: ${SAFI_SYNC_ENABLED:-true}
+      SAFI_SITE_URL: ${SAFI_SITE_URL:-http://localhost:3000}
+    ports:
+      - "3000:3000"
+
+volumes:
+  safi_mysql:
