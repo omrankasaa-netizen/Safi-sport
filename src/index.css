@@ -1,0 +1,110 @@
+/* Fonts load via <link> tags in index.html (preconnected, display=swap). */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* SAFI SPORT theme — dark graphite + signature red (SPEC §1) */
+    --background: 240 6% 4%;
+    --foreground: 220 14% 96%;
+    --card: 230 7% 8%;
+    --card-foreground: 220 14% 96%;
+    --popover: 230 7% 7%;
+    --popover-foreground: 220 14% 96%;
+    --primary: 358 78% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 228 6% 13%;
+    --secondary-foreground: 220 14% 96%;
+    --muted: 228 6% 13%;
+    --muted-foreground: 225 7% 58%;
+    --accent: 228 6% 15%;
+    --accent-foreground: 220 14% 96%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 228 6% 16%;
+    --input: 228 6% 18%;
+    --ring: 358 78% 50%;
+    --radius: 0.25rem;
+    --chart-1: 358 78% 50%;
+    --chart-2: 220 14% 96%;
+    --chart-3: 225 7% 58%;
+    --chart-4: 228 6% 25%;
+    --chart-5: 4 74% 35%;
+    --sidebar-background: 240 6% 4%;
+    --sidebar-foreground: 220 14% 96%;
+    --sidebar-primary: 358 78% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 228 6% 15%;
+    --sidebar-accent-foreground: 220 14% 96%;
+    --sidebar-border: 228 6% 16%;
+    --sidebar-ring: 358 78% 50%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "tnum" 1, "cv05" 1;
+  }
+
+  ::selection {
+    background: hsl(var(--primary));
+    color: white;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Barlow Condensed', 'Inter', sans-serif;
+  }
+  .font-body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  /* diagonal speed slash accent */
+  .slash::after {
+    content: '';
+    display: inline-block;
+    width: 0.14em;
+    height: 0.82em;
+    margin-left: 0.12em;
+    background: hsl(var(--primary));
+    transform: skewX(-18deg) translateY(0.06em);
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(244, 245, 247, 0.35);
+    color: transparent;
+  }
+  .text-stroke-strong {
+    -webkit-text-stroke: 2px rgba(244, 245, 247, 0.75);
+    color: transparent;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(26px) skewY(1.5deg); }
+    to   { opacity: 1; transform: translateY(0) skewY(0); }
+  }
+  .rise { animation: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+  .rise-1 { animation-delay: 0.08s; }
+  .rise-2 { animation-delay: 0.18s; }
+  .rise-3 { animation-delay: 0.3s; }
+  .rise-4 { animation-delay: 0.42s; }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .ticker { animation: ticker 28s linear infinite; }
+
+  @keyframes pulse-red {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+  .pulse-red { animation: pulse-red 1.6s ease-in-out infinite; }
+}
