@@ -1,0 +1,39 @@
+# Dependabot — automated dependency updates.
+# Docs: https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+
+updates:
+  # npm dependencies (root package.json — covers both the Vite frontend
+  # and the Hono backend, which share one package manifest).
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Asia/Beirut"
+    open-pull-requests-limit: 10
+    versioning-strategy: increase
+    labels:
+      - "dependencies"
+      - "npm"
+    # Group minor+patch bumps into a single PR to cut review noise;
+    # major bumps and security fixes always get their own PR.
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
+
+  # Keep GitHub Actions (checkout, codeql-action, …) up to date.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "06:00"
+      timezone: "Asia/Beirut"
+    labels:
+      - "dependencies"
+      - "github-actions"
