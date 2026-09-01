@@ -21,7 +21,6 @@ function RoutePageViewTracker() {
 export default function Layout() {
   return (
     <div className="flex min-h-screen flex-col bg-safi-black text-safi-ice">
-      <ScrollToTop />
       <Header />
       <div className="flex-1">
         <Outlet />
