@@ -1,21 +1,19 @@
-/**
- * SAFI wordmark — forward-leaning italic caps with the red speed-slash.
- * Pure styled text/SVG: no binary logo files in the repo.
- */
-export function LogoMark({ size = 'md', light = false }) {
-  const scale = size === 'lg' ? 'text-4xl' : size === 'sm' ? 'text-lg' : 'text-2xl';
-  const sub = size === 'lg' ? 'text-[11px]' : size === 'sm' ? 'text-[6px]' : 'text-[8px]';
-  const base = light ? 'text-safi-black' : 'text-safi-ice';
+import { SAFI_LOGO_URI } from '@/lib/logoAssets';
 
+/**
+ * SAFI SPORT logo — the owner's real red running-man lockup.
+ * Served as an embedded image (see src/lib/logoAssets.js); the master
+ * file lives at public/logo.webp for anything outside the React app.
+ * `light` contexts are unsupported: the white "SPORT" needs a dark bg.
+ */
+export function LogoMark({ size = 'md' }) {
+  const h = size === 'lg' ? 'h-12' : size === 'sm' ? 'h-5' : 'h-8';
   return (
-    <span className="inline-flex select-none flex-col leading-none">
-      <span className={`font-display font-extrabold italic ${scale} tracking-tight`}>
-        <span className={base}>SAFI</span>
-        <span className="text-safi-red">/</span>
-      </span>
-      <span className={`font-display font-semibold ${sub} ${base} ml-0.5 tracking-[0.62em]`}>
-        SPORT
-      </span>
-    </span>
+    <img
+      src={SAFI_LOGO_URI}
+      alt="SAFI SPORT"
+      className={`${h} w-auto select-none`}
+      draggable="false"
+    />
   );
 }

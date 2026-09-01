@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams, Link } from 'react-router';
 import { MailCheck, ShieldCheck } from 'lucide-react';
 import { trpc } from '@/providers/trpc';
 import { useAuth } from '@/lib/AuthContext';
+import { LogoMark } from '@/components/Logo';
 import { ErrorNote, btnRed, inputCls, labelCls } from './ui';
 
 /**
@@ -32,10 +33,8 @@ export default function AdminLogin() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-safi-black px-4">
       <div className="w-full max-w-sm rounded-sm border border-safi-line bg-safi-graphite/60 p-6">
-        <p className="font-display text-4xl font-extrabold uppercase italic text-safi-ice">
-          SAFI<span className="text-safi-red">/</span>
-        </p>
-        <p className="mt-1 text-[11px] uppercase tracking-[0.25em] text-safi-steel">Staff sign-in</p>
+        <LogoMark size="lg" />
+        <p className="mt-2 text-[11px] uppercase tracking-[0.25em] text-safi-steel">Staff sign-in</p>
 
         {step === 'email' ? (
           <form

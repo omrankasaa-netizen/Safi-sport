@@ -13,6 +13,7 @@ import {
   UsersRound,
 } from 'lucide-react';
 import { trpc } from '@/providers/trpc';
+import { LogoMark } from '@/components/Logo';
 import { useAuth } from '@/lib/AuthContext';
 
 const MENU = [
@@ -67,8 +68,8 @@ export default function AdminLayout({ children }) {
       <div className="sticky top-0 z-40 border-b border-safi-line bg-safi-black/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <div className="flex items-center gap-3">
-            <Link to="/admin" className="font-display text-2xl font-extrabold uppercase italic tracking-wide text-safi-ice">
-              SAFI<span className="text-safi-red">/</span>
+            <Link to="/admin" aria-label="SAFI SPORT admin">
+              <LogoMark size="sm" />
             </Link>
             <span className="rounded-sm bg-safi-red px-2 py-0.5 font-display text-[10px] font-bold uppercase tracking-[0.2em] text-white">
               OPS
