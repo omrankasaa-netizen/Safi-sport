@@ -8,6 +8,7 @@ import { trpc } from '@/providers/trpc';
 import { asList, normalizeCardProduct } from '@/lib/catalogModel';
 import { setPageMeta } from '@/lib/seo';
 import { trackContact } from '@/lib/metaPixel';
+import { SAFI_LOGO_URI } from '@/lib/logoAssets';
 
 function SectionTitle({ kicker, title, action }) {
   const nav = useNavigate();
@@ -80,12 +81,15 @@ export default function Home() {
           <p className="rise rise-1 text-[11px] font-semibold uppercase tracking-[0.4em] text-safi-red">
             Move Different<span className="text-safi-ice/60"> — Tripoli</span>
           </p>
-          <h1 className="rise rise-2 mt-2 font-display text-[20vw] font-extrabold uppercase italic leading-[0.84] tracking-tight sm:text-8xl md:text-9xl">
-            <span className="text-safi-ice">
-              SAFI<span className="text-safi-red">/</span>
-            </span>
-            <br />
-            <span className="text-stroke-strong">SPORT</span>
+          <h1 className="rise rise-2 mt-4">
+            <span className="sr-only">SAFI SPORT — sportswear, Tripoli</span>
+            <img
+              src={SAFI_LOGO_URI}
+              alt="SAFI SPORT"
+              aria-hidden="true"
+              draggable="false"
+              className="w-[min(88vw,560px)] select-none drop-shadow-[0_6px_30px_rgba(225,38,28,0.25)] md:w-[640px]"
+            />
           </h1>
           <p className="rise rise-3 mt-4 max-w-sm text-sm leading-relaxed text-safi-ice/75">
             Adult &amp; kids sportswear, shoes, training kits, jackets and hoodies — from two
